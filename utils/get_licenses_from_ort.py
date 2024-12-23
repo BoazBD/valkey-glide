@@ -34,6 +34,7 @@ APPROVED_LICENSES = [
     "Zlib",
     "MIT OR Unlicense",
     "PSF-2.0",
+    "Unicode-3.0"
 ]
 
 SCRIPT_PATH = os.path.dirname(os.path.realpath(__file__))
