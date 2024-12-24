@@ -9,7 +9,7 @@ excludes:
     paths:
         - pattern: ".*"
           reason: "BUILD_TOOL_OF"
-          comment: "invisible"
-        - pattern: "tests/.*"
+          comment: "Invisible"
+        - pattern: "^tests/.*"
           reason: "TEST_DEPENDENCY_OF"
-          comment: "Packages for testing only."
+          comment: "Files in the tests directory are excluded as they are only used for testing."
