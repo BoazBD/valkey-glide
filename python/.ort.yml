@@ -10,6 +10,6 @@ excludes:
         - pattern: ".*"
           reason: "BUILD_TOOL_OF"
           comment: "Invisible"
-        - pattern: "^tests/.*"
+        - pattern: "^python/tests/.*"
           reason: "TEST_TOOL_OF"
-          comment: "Files in the tests directory are excluded as they are used for testing purposes."
+          comment: "Files in the python/tests directory are excluded as they are used for testing purposes."
