@@ -6,6 +6,9 @@ excludes:
         - pattern: "dev-dependencies"
           reason: "DEV_DEPENDENCY_OF"
           comment: "Packages for development only."
+        - pattern: "tests/**"
+          reason: "TEST_OF"
+          comment: "This directory contains tests which are not distributed."
     paths:
         - pattern: ".*"
           reason: "BUILD_TOOL_OF"
