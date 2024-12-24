@@ -3,9 +3,9 @@ excludes:
         - pattern: "build-dependencies"
           reason: "BUILD_DEPENDENCY_OF"
           comment: "Packages for building the code only."
-        - pattern: ".*"
+        - pattern: "dev-dependencies"
           reason: "DEV_DEPENDENCY_OF"
-          comment: "Exclude all development dependencies, including test tools."
+          comment: "Packages for development only."
     paths:
         - pattern: ".*"
           reason: "TEST_TOOL_OF"
