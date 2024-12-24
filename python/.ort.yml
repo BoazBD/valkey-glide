@@ -5,5 +5,8 @@ excludes:
           comment: "Exclude all development dependencies, including test tools."
     paths:
         - pattern: ".*"
+          reason: "BUILD_TOOL_OF"
+          comment: "invisible"
+        - pattern: ".*"
           reason: "TEST_TOOL_OF"
           comment: "Files in the python/tests directory are excluded as they are used for testing purposes."
