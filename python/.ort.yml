@@ -11,5 +11,5 @@ excludes:
           reason: "BUILD_TOOL_OF"
           comment: "Invisible"
         - pattern: "^tests/.*"
-          reason: "TEST_DEPENDENCY_OF"
-          comment: "Files in the tests directory are excluded as they are only used for testing."
+          reason: "TEST_TOOL_OF"
+          comment: "Files in the tests directory are excluded as they are used for testing purposes."
