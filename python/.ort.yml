@@ -1,15 +1,9 @@
 excludes:
     scopes:
-        - pattern: "build-dependencies"
-          reason: "BUILD_DEPENDENCY_OF"
-          comment: "Packages for building the code only."
-        - pattern: "dev-dependencies"
+        - pattern: ".*"
           reason: "DEV_DEPENDENCY_OF"
-          comment: "Packages for development only."
+          comment: "Exclude all development dependencies, including test tools."
     paths:
         - pattern: ".*"
-          reason: "BUILD_TOOL_OF"
-          comment: "invisible"
-        - pattern: ".*"
           reason: "TEST_TOOL_OF"
-          comment: "Files that are used for testing purposes."
+          comment: "Files in the python/tests directory are excluded as they are used for testing purposes."
