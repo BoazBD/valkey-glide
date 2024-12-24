@@ -7,7 +7,7 @@ excludes:
           reason: "DEV_DEPENDENCY_OF"
           comment: "Packages for development only."
         - pattern: "tests/**"
-          reason: "TEST_OF"
+          reason: "TEST_TOOL_OF"
           comment: "This directory contains tests which are not distributed."
     paths:
         - pattern: ".*"
