@@ -7,12 +7,11 @@ excludes:
           reason: "DEV_DEPENDENCY_OF"
           comment: "Packages for development only."
     paths:
-        paths:
-        - pattern: ".*"
-          reason: "BUILD_TOOL_OF"
-          comment: "invisible"
         - pattern: ".*"
           reason: "TEST_TOOL_OF"
           comment: "Files in the python/tests directory are excluded as they are used for testing purposes."
+        - pattern: ".*"
+          reason: "BUILD_TOOL_OF"
+          comment: "invisible"
 
         
