@@ -7,9 +7,9 @@ excludes:
           reason: "DEV_DEPENDENCY_OF"
           comment: "Packages for development only."
     paths:
-        - pattern: ".*"
+        - pattern: "python/tests/.*"
           reason: "TEST_TOOL_OF"
-          comment: "Files in the python/tests directory are excluded as they are used for testing purposes."
+          comment: "Packages for testing only."
         - pattern: ".*"
           reason: "BUILD_TOOL_OF"
           comment: "invisible"
