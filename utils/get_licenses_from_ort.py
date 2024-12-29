@@ -17,6 +17,7 @@ APPROVED_LICENSES = [
     "Apache-2.0",
     "Apache-2.0 AND (Apache-2.0 OR BSD-2-Clause)",
     "Apache-2.0 AND (Apache-2.0 OR BSD-3-Clause)",
+    "Apache-2.0 AND MIT",
     "Apache-2.0 OR Apache-2.0 WITH LLVM-exception OR MIT",
     "Apache-2.0 OR BSD-2-Clause OR MIT",
     "Apache-2.0 OR BSL-1.0",
@@ -35,7 +36,6 @@ APPROVED_LICENSES = [
     "MIT OR Unlicense",
     "PSF-2.0",
     "Unicode-3.0",
-    "Apache-2.0 AND MIT",
     "(Apache-2.0 OR MIT) AND Unicode-3.0"
 ]
 
@@ -90,6 +90,7 @@ for ort_result in ort_results_per_lang:
         notice_file_text = notice_file.read()
         for package in json_file["analyzer"]["result"]["packages"]:
             package_name = package["id"].split(":")[2]
+            print("BOAZ: ", package)
             if package_name not in notice_file_text:
                 # skip packages not in the final report
                 skipped_packages.append(PackageLicense(package["id"], ort_result.name))
