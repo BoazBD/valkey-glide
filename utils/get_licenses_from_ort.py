@@ -38,7 +38,10 @@ APPROVED_LICENSES = [
     "Unicode-3.0",
     "(Apache-2.0 OR MIT) AND Unicode-3.0"
 ]
-
+APPROVED_PACKAGES = [
+    "PyPI::pathspec:0.12.1",
+    "PyPI::certifi:2023.11.17"
+]
 SCRIPT_PATH = os.path.dirname(os.path.realpath(__file__))
 
 
@@ -90,7 +93,6 @@ for ort_result in ort_results_per_lang:
         notice_file_text = notice_file.read()
         for package in json_file["analyzer"]["result"]["packages"]:
             package_name = package["id"].split(":")[2]
-            print("BOAZ: ", package)
             if package_name not in notice_file_text:
                 # skip packages not in the final report
                 skipped_packages.append(PackageLicense(package["id"], ort_result.name))
@@ -109,7 +111,7 @@ for ort_result in ort_results_per_lang:
                         package_license = PackageLicense(
                             package["id"], ort_result.name, license
                         )
-                        if license not in APPROVED_LICENSES:
+                        if license not in APPROVED_LICENSES and package["id"] not in APPROVED_PACKAGES:
                             unknown_licenses.append(package_license)
                         else:
                             final_packages.append(package_license)
