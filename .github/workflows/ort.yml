@@ -86,6 +86,10 @@ jobs:
               run: |
                   export JAVA_OPTS="$JAVA_OPTS -Xmx8g"
                   ./gradlew installDist
+
+            - name: Install maturin
+              run: pip install maturin==0.14.17
+              
             - name: Create ORT config file
               run: |
                   mkdir -p ~/.ort/config
