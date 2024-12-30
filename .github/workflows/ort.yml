@@ -87,9 +87,6 @@ jobs:
                   export JAVA_OPTS="$JAVA_OPTS -Xmx8g"
                   ./gradlew installDist
 
-            - name: Install maturin
-              run: pip install maturin==0.14.17
-              
             - name: Create ORT config file
               run: |
                   mkdir -p ~/.ort/config
@@ -99,11 +96,6 @@ jobs:
                       skip_excluded: true
                       allowDynamicVersions: true
                       enabledPackageManagers: [Cargo, NPM, PIP, GradleInspector]
-                    excludes:
-                      scopes:
-                        - pattern: "tests/**"
-                          reason: "TEST_DEPENDENCY_OF"
-                          comment: "Packages for testing only."
                   EOF
                   cat ~/.ort/config/config.yml
 
