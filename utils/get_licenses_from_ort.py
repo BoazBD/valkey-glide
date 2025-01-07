@@ -13,6 +13,8 @@ The script outputs a set of licenses identified by the analyzer. GLIDE maintaine
 APPROVED_LICENSES = [
     "Unicode-DFS-2016",
     "(Apache-2.0 OR MIT) AND Unicode-DFS-2016",
+    "Unicode-3.0",
+    "(Apache-2.0 OR MIT) AND Unicode-3.0",
     "0BSD OR Apache-2.0 OR MIT",
     "Apache-2.0",
     "Apache-2.0 AND (Apache-2.0 OR BSD-2-Clause)",
@@ -32,15 +34,18 @@ APPROVED_LICENSES = [
     "BSD-3-Clause OR Apache-2.0",
     "ISC",
     "MIT",
+    "MPL-2.0",
     "Zlib",
     "MIT OR Unlicense",
     "PSF-2.0",
-    "Unicode-3.0",
-    "(Apache-2.0 OR MIT) AND Unicode-3.0"
 ]
+
+# Packages with non-pre-approved licenses that received manual approval.
 APPROVED_PACKAGES = [
     "PyPI::pathspec:0.12.1",
-    "PyPI::certifi:2023.11.17"
+    "PyPI::certifi:2023.11.17",
+    "Crate::ring:0.17.8",
+    "Maven:org.json:json:20231013"
 ]
 SCRIPT_PATH = os.path.dirname(os.path.realpath(__file__))
 
