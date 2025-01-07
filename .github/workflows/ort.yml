@@ -87,6 +87,7 @@ jobs:
                   export JAVA_OPTS="$JAVA_OPTS -Xmx8g"
                   ./gradlew installDist
 
+                  
             - name: Create ORT config file
               run: |
                   mkdir -p ~/.ort/config
